@@ -1,6 +1,6 @@
 interface Rating {
-  rate: number
-  count: number
+  rate: number;
+  count: number;
 }
 
 export class Product {

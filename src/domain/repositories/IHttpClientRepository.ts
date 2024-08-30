@@ -4,5 +4,5 @@ export interface IHttpResponse<T> {
 }
 
 export interface IHttpClientRepository {
-  get<T>(url: string): Promise<IHttpResponse<T>>;
+  get<T>(endpoint: string): Promise<IHttpResponse<T>>;
 }

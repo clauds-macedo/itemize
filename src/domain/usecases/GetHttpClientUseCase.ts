@@ -1,4 +1,4 @@
-import { IHttpClientRepository } from '../repositories/IHttpClientRepository';
+import type { IHttpClientRepository } from '../repositories/IHttpClientRepository';
 
 export class GetHttpClientUseCase {
   constructor(private httpClientRepository: IHttpClientRepository) {}

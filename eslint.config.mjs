@@ -25,8 +25,8 @@ export default [
       'airbnb/hooks',
       'plugin:@typescript-eslint/recommended',
       'prettier',
-      'plugin:prettier/recommended'
-    )
+      'plugin:prettier/recommended',
+    ),
   ),
   {
     plugins: {
@@ -57,6 +57,8 @@ export default [
       'react/react-in-jsx-scope': 'off',
       'react/jsx-props-no-spreading': 'off',
       'no-underscore-dangle': 'off',
+      'no-useless-constructor': 'off',
+      'no-empty-function': 'off',
 
       '@typescript-eslint/consistent-type-assertions': [
         'warn',

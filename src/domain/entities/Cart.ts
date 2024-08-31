@@ -9,4 +9,14 @@ export class Cart {
   getTotal(): number {
     return this.product.price * this.quantity;
   }
+
+  updateQuantity(amount: number): void {
+    const newQuantity = this.quantity + amount;
+
+    if (newQuantity < 0) {
+      return;
+    }
+
+    this.quantity = newQuantity;
+  }
 }

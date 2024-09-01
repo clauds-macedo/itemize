@@ -1,6 +1,6 @@
 /* eslint-disable class-methods-use-this */
-import type { IHttpClientRepository } from '@domain/repositories/IHttpClientRepository';
-import { api } from '@infra/config/api';
+import type { IHttpClientRepository } from '@/domain/repositories/IHttpClientRepository';
+import { api } from '@/infra/config/api';
 
 export class AxiosHttpClientRepository implements IHttpClientRepository {
   async get<T>(endpoint: string) {

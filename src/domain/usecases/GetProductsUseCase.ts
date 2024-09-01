@@ -1,4 +1,4 @@
-import type { IProductRepository } from '@domain/repositories/IProductRepository';
+import type { IProductRepository } from '@/domain/repositories/IProductRepository';
 
 export class GetProductsUseCase {
   constructor(private productRepository: IProductRepository) {}

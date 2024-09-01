@@ -1,9 +1,8 @@
 import './App.css';
+import { Products } from './presentation/pages/Products';
 
 function App() {
-  return (
-    <p class="text-blue-600/75 text-xs">Test</p>
-  );
+  return <Products />;
 }
 
 export default App;

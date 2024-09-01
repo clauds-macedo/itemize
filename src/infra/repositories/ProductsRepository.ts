@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable class-methods-use-this */
-import type { Product } from '@domain/entities/Product';
-import type { IProductRepository } from '@domain/repositories/IProductRepository';
-import { getHttpClient } from '@main/factories/GetHttpClient';
+import type { Product } from '@/domain/entities/Product';
+import type { IProductRepository } from '@/domain/repositories/IProductRepository';
+import { getHttpClient } from '@/main/factories/GetHttpClient';
 
 export class ProductRepository implements IProductRepository {
   async getProducts(): Promise<Product[]> {

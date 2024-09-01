@@ -4,25 +4,25 @@ import { useCartStore } from '@/main/stores/CartStore';
 import { useCallback } from 'react';
 
 export const useCartActions = () => {
-  const { cart, setCart } = useCartStore();
+  const [cart, setCart] = useCartStore((state) => [state.cart, state.setCart]);
 
   const addItem = useCallback(
     (product: Product) => {
-      const existingItem = cart.find((item) => item.product.id === product.id);
+      const newCart = { ...cart };
 
-      if (existingItem) {
-        existingItem.updateQuantity(1);
-        setCart([...cart]);
-      } else {
-        setCart([...cart, new Cart(product, 1)]);
-      }
+      const item = newCart[product.id] || new Cart(product, 0);
+      item.updateQuantity(1);
+
+      newCart[product.id] = item;
+      setCart(newCart);
     },
     [cart, setCart],
   );
 
   const removeItem = useCallback(
     (productId: number) => {
-      const newCart = cart.filter((item) => item.product.id !== productId);
+      const newCart = { ...cart };
+      delete newCart[productId];
       setCart(newCart);
     },
     [cart, setCart],
@@ -30,23 +30,26 @@ export const useCartActions = () => {
 
   const updateQuantity = useCallback(
     (productId: number, amount: number) => {
-      const updatedCart = cart.map((item) => {
-        if (item.product.id === productId) {
-          item.updateQuantity(amount);
-        }
-        return item;
-      });
+      const newCart = { ...cart };
 
-      setCart(updatedCart);
+      if (newCart[productId]) {
+        newCart[productId].updateQuantity(amount);
+      }
+
+      setCart(newCart);
     },
     [cart, setCart],
   );
 
   const getTotalPrice = useCallback(() => {
-    return cart.reduce((total, item) => total + item.getTotal(), 0);
+    return Object.values(cart).reduce(
+      (total, item) => total + item.getTotal(),
+      0,
+    );
   }, [cart]);
 
   return {
+    cart,
     addItem,
     removeItem,
     updateQuantity,

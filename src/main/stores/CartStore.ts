@@ -1,4 +1,4 @@
-import type { Cart } from '@domain/entities/Cart';
+import type { Cart } from '@/domain/entities/Cart';
 import { create } from 'zustand';
 
 type CartState = {

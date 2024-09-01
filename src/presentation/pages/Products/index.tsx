@@ -1,25 +1,21 @@
+import { Product } from '@/domain/entities/Product';
 import { Card } from '@/presentation/components/Card';
+import { useProducts } from '@/presentation/hooks/useProducts';
 
 export const Products: React.FC = () => {
+  const { products } = useProducts();
+
   return (
-    <div>
-      <Card.Root className="w-64">
-        <Card.Image src="https://via.placeholder.com/150" alt="Vanilla Latte" />
-        <Card.Rating className="absolute top-2 left-2">4.8</Card.Rating>
-        <Card.Title>Vanilla Latte</Card.Title>
-        <Card.Price>21 K</Card.Price>
-        <Card.Actions>
-          <button className="bg-red-500 text-white px-2 py-1 rounded-full">
-            Hot
-          </button>
-          <button className="bg-gray-300 text-gray-800 px-2 py-1 rounded-full">
-            Cold
-          </button>
-          <button className="ml-auto bg-orange-500 text-white px-4 py-2 rounded-full">
-            🛒
-          </button>
-        </Card.Actions>
-      </Card.Root>
+    <div className="flex flex-row flex-wrap justify-center w-full px-8 py-4 gap-8">
+      {products.map((product: Product) => (
+        <Card.Root key={product.id} className="w-64 cursor-pointer">
+          <Card.Rating>{product.rating.rate} ★</Card.Rating>
+          <Card.Image src={product.image} alt={product.title} />
+          <Card.Title>{product.title.substring(0, 28)}...</Card.Title>
+          <Card.Price>U$ {product.price}</Card.Price>
+          <Card.Button className="my-2">Add to Cart</Card.Button>
+        </Card.Root>
+      ))}
     </div>
   );
 };

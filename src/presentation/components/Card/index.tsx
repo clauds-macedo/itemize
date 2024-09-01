@@ -1,4 +1,4 @@
-import { CardActions } from './CardActions';
+import { CardButton } from './CardButton';
 import { CardImage } from './CardImage';
 import { CardPrice } from './CardPrice';
 import { CardRating } from './CardRating';
@@ -11,5 +11,5 @@ export const Card = {
   Title: CardTitle,
   Price: CardPrice,
   Rating: CardRating,
-  Actions: CardActions,
+  Button: CardButton,
 };

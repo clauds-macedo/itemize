@@ -10,7 +10,6 @@ export const CardRating: React.FC<CardRatingProps> = ({
       <span className="bg-yellow-400 text-white text-xs px-2 py-1 rounded-full">
         {children}
       </span>
-      <span className="text-sm">★</span>
     </div>
   );
 };

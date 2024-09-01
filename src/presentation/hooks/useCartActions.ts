@@ -1,5 +1,5 @@
 import { Cart } from '@/domain/entities/Cart';
-import { Product } from '@/domain/entities/Product';
+import type { Product } from '@/domain/entities/Product';
 import { useCartStore } from '@/main/stores/CartStore';
 import { useCallback } from 'react';
 

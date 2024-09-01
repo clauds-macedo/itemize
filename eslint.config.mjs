@@ -59,6 +59,8 @@ export default [
       'no-underscore-dangle': 'off',
       'no-useless-constructor': 'off',
       'no-empty-function': 'off',
+      'jsx-a11y/heading-has-content': 'off',
+      'jsx-a11y/alt-text': 'off',
 
       '@typescript-eslint/consistent-type-assertions': [
         'warn',

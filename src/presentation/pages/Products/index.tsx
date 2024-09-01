@@ -1,4 +1,4 @@
-import { Product } from '@/domain/entities/Product';
+import type { Product } from '@/domain/entities/Product';
 import { Card } from '@/presentation/components/Card';
 import { useCartActions } from '@/presentation/hooks/useCartActions';
 import { useProducts } from '@/presentation/hooks/useProducts';
@@ -11,29 +11,34 @@ export const Products: React.FC = () => {
   const { addItem } = useCartActions();
   const navigate = useNavigate();
 
-  const onAddItem = useCallback((product: Product) => {
-    addItem(product);
-    toast.success(
-      <>
-        Item sucessfully added!
-        <button
-          onClick={() => {
-            toast.dismiss();
-            navigate('/cart');
-          }}
-          className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600"
-        >
-          Go to cart
-        </button>
-      </>,
-    );
-  }, []);
+  const onAddItem = useCallback(
+    (product: Product) => {
+      addItem(product);
+      toast.success(
+        <>
+          Item sucessfully added!
+          <button
+            onClick={() => {
+              toast.dismiss();
+              navigate('/cart');
+            }}
+            className="px-3 py-1 bg-green-500 text-white rounded hover:bg-green-600"
+            type="button"
+          >
+            Go to cart
+          </button>
+        </>,
+      );
+    },
+    [addItem, navigate],
+  );
 
   return (
     <div className="p-2 w-full">
       <button
         onClick={() => navigate('/cart')}
         className="mb-4 p-2 bg-blue-500 text-white rounded hover:bg-blue-600 flex items-center self-end"
+        type="button"
       >
         Go to Cart
       </button>

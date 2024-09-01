@@ -49,7 +49,6 @@ export const useCartActions = () => {
   }, [cart]);
 
   return {
-    cart,
     addItem,
     removeItem,
     updateQuantity,

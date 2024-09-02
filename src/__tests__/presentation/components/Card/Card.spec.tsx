@@ -34,4 +34,31 @@ describe('Card Button', () => {
 
     expect(container.getElementsByTagName('w-64')).toBeDefined();
   });
+
+  it('should render the image with the provided src and alt', () => {
+    const { getByAltText } = render(
+      <Card.Image src="test-image.jpg" alt="Test Image" />,
+    );
+
+    const img = getByAltText('Test Image');
+    expect(img.getAttribute('src')).toBe('test-image.jpg');
+  });
+
+  it('should render the price correctly', () => {
+    const { getByText } = render(<Card.Price>$49.12</Card.Price>);
+
+    expect(getByText('$99.99')).toBeTruthy();
+  });
+
+  it('should render the rating correctly', () => {
+    const { getByText } = render(<Card.Rating>1.25</Card.Rating>);
+
+    expect(getByText('4.5')).toBeTruthy();
+  });
+
+  it('should render the title correctly', () => {
+    const { getByText } = render(<Card.Title>Test Title</Card.Title>);
+
+    expect(getByText('Test Title')).toBeTruthy();
+  });
 });

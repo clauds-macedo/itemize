@@ -1,42 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1725304501715" clover="3.2.0">
-  <project timestamp="1725304501715" name="All files">
-    <metrics statements="45" coveredstatements="45" conditionals="6" coveredconditionals="6" methods="21" coveredmethods="21" elements="72" coveredelements="72" complexity="0" loc="45" ncloc="45" packages="5" files="8" classes="8"/>
+<coverage generated="1725308094817" clover="3.2.0">
+  <project timestamp="1725308094817" name="All files">
+    <metrics statements="89" coveredstatements="89" conditionals="6" coveredconditionals="6" methods="28" coveredmethods="28" elements="123" coveredelements="123" complexity="0" loc="89" ncloc="89" packages="6" files="15" classes="15"/>
     <package name="domain.entities">
-      <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
+      <metrics statements="16" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="4"/>
       <file name="Cart.ts" path="C:\Users\Claud\Desktop\itemize\src\domain\entities\Cart.ts">
-        <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <metrics statements="8" coveredstatements="8" conditionals="1" coveredconditionals="1" methods="3" coveredmethods="3"/>
+        <line num="3" count="2" type="stmt"/>
+        <line num="5" count="8" type="stmt"/>
+        <line num="6" count="8" type="stmt"/>
         <line num="10" count="3" type="stmt"/>
         <line num="14" count="4" type="stmt"/>
-        <line num="16" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="16" count="4" type="cond" truecount="1" falsecount="0"/>
         <line num="17" count="1" type="stmt"/>
         <line num="20" count="3" type="stmt"/>
       </file>
       <file name="Product.ts" path="C:\Users\Claud\Desktop\itemize\src\domain\entities\Product.ts">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="6" type="stmt"/>
+        <line num="8" count="6" type="stmt"/>
+        <line num="9" count="6" type="stmt"/>
+        <line num="10" count="6" type="stmt"/>
+        <line num="11" count="6" type="stmt"/>
+        <line num="12" count="6" type="stmt"/>
+        <line num="13" count="6" type="stmt"/>
+        <line num="14" count="6" type="stmt"/>
       </file>
     </package>
     <package name="domain.enums">
-      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
       <file name="EProductRepositoryErrors.ts" path="C:\Users\Claud\Desktop\itemize\src\domain\enums\EProductRepositoryErrors.ts">
-        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <metrics statements="3" coveredstatements="3" conditionals="2" coveredconditionals="2" methods="1" coveredmethods="1"/>
+        <line num="1" count="1" type="cond" truecount="2" falsecount="0"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
       </file>
     </package>
     <package name="domain.usecases">
-      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <metrics statements="6" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
       <file name="GetHttpClientUseCase.ts" path="C:\Users\Claud\Desktop\itemize\src\domain\usecases\GetHttpClientUseCase.ts">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="7" count="4" type="stmt"/>
       </file>
       <file name="GetProductsUseCase.ts" path="C:\Users\Claud\Desktop\itemize\src\domain\usecases\GetProductsUseCase.ts">
-        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="7" count="1" type="stmt"/>
       </file>
     </package>
     <package name="infra.repositories">
-      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <file name="ProductsRepository.ts" path="C:\Users\Claud\Desktop\itemize\src\infra\repositories\ProductsRepository.ts">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <metrics statements="11" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+        <line num="9" count="1" type="stmt"/>
         <line num="12" count="2" type="stmt"/>
         <line num="14" count="2" type="stmt"/>
         <line num="15" count="1" type="stmt"/>
@@ -47,10 +68,56 @@
         <line num="28" count="1" type="stmt"/>
       </file>
     </package>
+    <package name="presentation.components.Card">
+      <metrics statements="19" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="6"/>
+      <file name="CardButton.tsx" path="C:\Users\Claud\Desktop\itemize\src\presentation\components\Card\CardButton.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="3" type="stmt"/>
+      </file>
+      <file name="CardImage.tsx" path="C:\Users\Claud\Desktop\itemize\src\presentation\components\Card\CardImage.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="CardPrice.tsx" path="C:\Users\Claud\Desktop\itemize\src\presentation\components\Card\CardPrice.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="CardRating.tsx" path="C:\Users\Claud\Desktop\itemize\src\presentation\components\Card\CardRating.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+      <file name="CardRoot.tsx" path="C:\Users\Claud\Desktop\itemize\src\presentation\components\Card\CardRoot.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="3" type="stmt"/>
+      </file>
+      <file name="CardTitle.tsx" path="C:\Users\Claud\Desktop\itemize\src\presentation\components\Card\CardTitle.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
+      </file>
+      <file name="index.tsx" path="C:\Users\Claud\Desktop\itemize\src\presentation\components\Card\index.tsx">
+        <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="2" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
+        <line num="5" count="1" type="stmt"/>
+        <line num="6" count="1" type="stmt"/>
+        <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
     <package name="presentation.hooks">
-      <metrics statements="30" coveredstatements="30" conditionals="4" coveredconditionals="4" methods="10" coveredmethods="10"/>
+      <metrics statements="34" coveredstatements="34" conditionals="3" coveredconditionals="3" methods="10" coveredmethods="10"/>
       <file name="useCartActions.ts" path="C:\Users\Claud\Desktop\itemize\src\presentation\hooks\useCartActions.ts">
-        <metrics statements="22" coveredstatements="22" conditionals="4" coveredconditionals="4" methods="7" coveredmethods="7"/>
+        <metrics statements="25" coveredstatements="25" conditionals="3" coveredconditionals="3" methods="7" coveredmethods="7"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="4" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="7" count="5" type="stmt"/>
         <line num="9" count="5" type="stmt"/>
@@ -65,7 +132,7 @@
         <line num="26" count="1" type="stmt"/>
         <line num="31" count="5" type="stmt"/>
         <line num="33" count="2" type="stmt"/>
-        <line num="35" count="2" type="cond" truecount="2" falsecount="0"/>
+        <line num="35" count="2" type="cond" truecount="1" falsecount="0"/>
         <line num="36" count="1" type="stmt"/>
         <line num="39" count="1" type="stmt"/>
         <line num="40" count="1" type="stmt"/>
@@ -75,7 +142,8 @@
         <line num="52" count="5" type="stmt"/>
       </file>
       <file name="useProducts.ts" path="C:\Users\Claud\Desktop\itemize\src\presentation\hooks\useProducts.ts">
-        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <metrics statements="9" coveredstatements="9" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="2" count="1" type="stmt"/>
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="2" type="stmt"/>
         <line num="8" count="2" type="stmt"/>

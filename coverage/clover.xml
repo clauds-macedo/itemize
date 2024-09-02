@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1725301207277" clover="3.2.0">
-  <project timestamp="1725301207277" name="All files">
-    <metrics statements="36" coveredstatements="36" conditionals="6" coveredconditionals="6" methods="16" coveredmethods="16" elements="58" coveredelements="58" complexity="0" loc="36" ncloc="36" packages="3" files="5" classes="5"/>
+<coverage generated="1725304501715" clover="3.2.0">
+  <project timestamp="1725304501715" name="All files">
+    <metrics statements="45" coveredstatements="45" conditionals="6" coveredconditionals="6" methods="21" coveredmethods="21" elements="72" coveredelements="72" complexity="0" loc="45" ncloc="45" packages="5" files="8" classes="8"/>
     <package name="domain.entities">
       <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="4" coveredmethods="4"/>
       <file name="Cart.ts" path="C:\Users\Claud\Desktop\itemize\src\domain\entities\Cart.ts">
@@ -16,11 +16,35 @@
         <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       </file>
     </package>
+    <package name="domain.enums">
+      <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      <file name="EProductRepositoryErrors.ts" path="C:\Users\Claud\Desktop\itemize\src\domain\enums\EProductRepositoryErrors.ts">
+        <metrics statements="0" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+      </file>
+    </package>
     <package name="domain.usecases">
-      <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="4"/>
+      <file name="GetHttpClientUseCase.ts" path="C:\Users\Claud\Desktop\itemize\src\domain\usecases\GetHttpClientUseCase.ts">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="7" count="4" type="stmt"/>
+      </file>
       <file name="GetProductsUseCase.ts" path="C:\Users\Claud\Desktop\itemize\src\domain\usecases\GetProductsUseCase.ts">
         <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
         <line num="7" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="infra.repositories">
+      <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+      <file name="ProductsRepository.ts" path="C:\Users\Claud\Desktop\itemize\src\infra\repositories\ProductsRepository.ts">
+        <metrics statements="8" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
+        <line num="12" count="2" type="stmt"/>
+        <line num="14" count="2" type="stmt"/>
+        <line num="15" count="1" type="stmt"/>
+        <line num="17" count="1" type="stmt"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="23" count="2" type="stmt"/>
+        <line num="26" count="1" type="stmt"/>
+        <line num="28" count="1" type="stmt"/>
       </file>
     </package>
     <package name="presentation.hooks">

@@ -79,7 +79,6 @@ describe('useCartActions', () => {
 
     expect(setCartMock).toHaveBeenCalledTimes(1);
     const updatedCart = setCartMock.mock.calls[0][0];
-    console.log(setCartMock.mock.calls[0][0], 'oisd');
     expect(updatedCart[product.id].quantity).toBe(6);
   });
 });

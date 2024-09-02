@@ -1,5 +1,5 @@
-import { MockProductRepository } from '@/__tests__/mocks/MockProductRepository';
 import { GetProductsUseCase } from '@/domain/usecases/GetProductsUseCase';
+import { MockProductRepository } from '../../__mocks__/MockProductRepository';
 
 describe('GetProductsUseCase', () => {
   it('should return all products', async () => {

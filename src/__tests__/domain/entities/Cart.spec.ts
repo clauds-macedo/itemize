@@ -1,12 +1,19 @@
-import { fakeProduct } from '@/__tests__/fakes/Product';
 import { Cart } from '@/domain/entities/Cart';
-import type { Product } from '@/domain/entities/Product';
+import { Product } from '@/domain/entities/Product';
 
 describe('Cart', () => {
   let product: Product;
 
   beforeEach(() => {
-    product = fakeProduct;
+    product = new Product(
+      1,
+      'Title',
+      100,
+      'Test description hehe',
+      'category',
+      'mocked_image.png',
+      { rate: 4.5, count: 10 },
+    );
   });
 
   it('should calculate the total price correctly', () => {

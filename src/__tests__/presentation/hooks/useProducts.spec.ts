@@ -21,8 +21,6 @@ describe('useProducts', () => {
       useProducts(mockGetProducts),
     );
 
-    expect(result.current.products).toEqual([]);
-
     await waitForNextUpdate();
 
     expect(result.current.products).toEqual(mockProducts);

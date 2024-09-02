@@ -34,6 +34,10 @@ export const Products: React.FC = () => {
     [addItem, navigate],
   );
 
+  if (!products) {
+    return <span>Carregando</span>;
+  }
+
   return (
     <div className="p-2 w-full">
       <button

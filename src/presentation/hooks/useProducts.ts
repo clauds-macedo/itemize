@@ -1,14 +1,20 @@
-import type { Product } from '@/domain/entities/Product';
-import { useCallback, useEffect, useState } from 'react';
+import { useProductStore } from '@/main/stores/ProductStore';
+import { useCallback, useEffect } from 'react';
 import type { IGetProductsContract } from './contracts/IGetProductsContract';
 
 export const useProducts = (getProducts: IGetProductsContract) => {
-  const [products, setProducts] = useState<Product[]>([]);
+  const [products, setProducts] = useProductStore((state) => [
+    state.products,
+    state.setProducts,
+  ]);
 
   const getRemoteProducts = useCallback(async () => {
+    if (products) {
+      return;
+    }
     const remoteProducts = await getProducts.execute();
     setProducts(remoteProducts);
-  }, [getProducts]);
+  }, [getProducts, products, setProducts]);
 
   useEffect(() => {
     getRemoteProducts();

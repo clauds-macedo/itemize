@@ -32,10 +32,11 @@ export const useCartActions = () => {
     (productId: number, amount: number) => {
       const newCart = { ...cart };
 
-      if (newCart[productId]) {
-        newCart[productId].updateQuantity(amount);
+      if (!newCart[productId]) {
+        return;
       }
 
+      newCart[productId].updateQuantity(amount);
       setCart(newCart);
     },
     [cart, setCart],

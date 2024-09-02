@@ -73,4 +73,26 @@ describe('useCartActions', () => {
     const updatedCart = setCartMock.mock.calls[0][0];
     expect(updatedCart[product.id].quantity).toBe(6);
   });
+
+  it('should not update quantity if the product is not in the cart', () => {
+    const { result } = renderHook(() => useCartActions());
+
+    act(() => {
+      result.current.updateQuantity(-1, 5);
+    });
+
+    expect(setCartMock).not.toHaveBeenCalled();
+  });
+
+  it('should calculate the total price of items in the cart', () => {
+    const secondaryProduct: Product = { ...product, id: 2, price: 200 };
+    cartMock[product.id] = new Cart(product, 2); // 2 * 100 = 200
+    cartMock[secondaryProduct.id] = new Cart(secondaryProduct, 3); // 3 * 200 = 600
+
+    const { result } = renderHook(() => useCartActions());
+
+    const totalPrice = result.current.getTotalPrice();
+
+    expect(totalPrice).toBe(800); // 200 + 600 = 800
+  });
 });

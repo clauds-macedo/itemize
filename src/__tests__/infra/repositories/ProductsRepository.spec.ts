@@ -1,5 +1,6 @@
 import { fakeProduct } from '@/__tests__/__mocks__/fakes/Product';
 import type { Product } from '@/domain/entities/Product';
+import { EProductRepositoryErrors } from '@/domain/enums/EProductRepositoryErrors';
 import type { IHttpClientRepository } from '@/domain/repositories/IHttpClientRepository';
 import { GetHttpClientUseCase } from '@/domain/usecases/GetHttpClientUseCase';
 import { ProductRepository } from '@/infra/repositories/ProductsRepository';
@@ -34,7 +35,7 @@ describe('ProductRepository', () => {
     mockHttpClientRepository.get.mockRejectedValue(new Error('Request failed'));
 
     await expect(productRepository.getProducts()).rejects.toThrow(
-      'Failed to fetch products',
+      EProductRepositoryErrors.FETCH_PRODUCTS_FAILED,
     );
     expect(mockHttpClientRepository.get).toHaveBeenCalledWith('/products');
   });
@@ -55,7 +56,7 @@ describe('ProductRepository', () => {
     mockHttpClientRepository.get.mockRejectedValue(new Error('Request failed'));
 
     await expect(productRepository.getProductById(1)).rejects.toThrow(
-      'Failed to fetch product with id 1',
+      `${EProductRepositoryErrors.FETCH_PRODUCT_BY_ID_FAILED} 1`,
     );
     expect(mockHttpClientRepository.get).toHaveBeenCalledWith('/products/1');
   });

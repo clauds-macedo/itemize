@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1725308094817" clover="3.2.0">
-  <project timestamp="1725308094817" name="All files">
-    <metrics statements="89" coveredstatements="89" conditionals="6" coveredconditionals="6" methods="28" coveredmethods="28" elements="123" coveredelements="123" complexity="0" loc="89" ncloc="89" packages="6" files="15" classes="15"/>
+<coverage generated="1725308502757" clover="3.2.0">
+  <project timestamp="1725308502757" name="All files">
+    <metrics statements="91" coveredstatements="91" conditionals="6" coveredconditionals="6" methods="29" coveredmethods="29" elements="126" coveredelements="126" complexity="0" loc="91" ncloc="91" packages="7" files="16" classes="16"/>
     <package name="domain.entities">
       <metrics statements="16" coveredstatements="16" conditionals="1" coveredconditionals="1" methods="4" coveredmethods="4"/>
       <file name="Cart.ts" path="C:\Users\Claud\Desktop\itemize\src\domain\entities\Cart.ts">
@@ -109,6 +109,14 @@
         <line num="5" count="1" type="stmt"/>
         <line num="6" count="1" type="stmt"/>
         <line num="8" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="presentation.components.PageTitle">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="index.tsx" path="C:\Users\Claud\Desktop\itemize\src\presentation\components\PageTitle\index.tsx">
+        <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="7" count="1" type="stmt"/>
       </file>
     </package>
     <package name="presentation.hooks">

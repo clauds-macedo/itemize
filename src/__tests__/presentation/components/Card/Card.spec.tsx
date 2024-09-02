@@ -47,13 +47,13 @@ describe('Card Button', () => {
   it('should render the price correctly', () => {
     const { getByText } = render(<Card.Price>$49.12</Card.Price>);
 
-    expect(getByText('$99.99')).toBeTruthy();
+    expect(getByText('$49.12')).toBeTruthy();
   });
 
   it('should render the rating correctly', () => {
     const { getByText } = render(<Card.Rating>1.25</Card.Rating>);
 
-    expect(getByText('4.5')).toBeTruthy();
+    expect(getByText('1.25')).toBeTruthy();
   });
 
   it('should render the title correctly', () => {

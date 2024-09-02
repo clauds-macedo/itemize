@@ -1,7 +1,7 @@
 import type { Cart } from '@/domain/entities/Cart';
 import { create } from 'zustand';
 
-interface CartStore {
+export interface CartStore {
   cart: Record<number, Cart>;
   setCart: (cart: Record<number, Cart>) => void;
 }

@@ -1,4 +1,5 @@
 import type { Product } from '@/domain/entities/Product';
+import { getProducts } from '@/main/factories/GetProducts';
 import { Card } from '@/presentation/components/Card';
 import { useCartActions } from '@/presentation/hooks/useCartActions';
 import { useProducts } from '@/presentation/hooks/useProducts';
@@ -7,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
 export const Products: React.FC = () => {
-  const { products } = useProducts();
+  const { products } = useProducts(getProducts);
   const { addItem } = useCartActions();
   const navigate = useNavigate();
 

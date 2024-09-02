@@ -1,16 +1,11 @@
-import { Product } from '@/domain/entities/Product';
+import type { Product } from '@/domain/entities/Product';
 import type { IProductRepository } from '@/domain/repositories/IProductRepository';
+import { fakeProduct } from './fakes/Product';
 
 export class MockProductRepository implements IProductRepository {
   private products: Product[] = [
-    new Product(1, 'Product1', 100, 'Description1', 'Category1', 'image1.png', {
-      rate: 4.5,
-      count: 10,
-    }),
-    new Product(2, 'Product2', 150, 'Description2', 'Category2', 'image2.png', {
-      rate: 4.7,
-      count: 5,
-    }),
+    fakeProduct,
+    { ...fakeProduct, id: 2, title: 'Title2' },
   ];
 
   async getProducts(): Promise<Product[]> {

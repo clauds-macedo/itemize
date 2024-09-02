@@ -1,3 +1,4 @@
+import { fakeProduct } from '@/__tests__/__mocks__/fakes/Product';
 import { Cart } from '@/domain/entities/Cart';
 import type { Product } from '@/domain/entities/Product';
 import type { CartStore } from '@/main/stores/CartStore';
@@ -15,16 +16,7 @@ describe('useCartActions', () => {
   let cartMock: CartStore['cart'];
 
   beforeAll(() => {
-    product = {
-      id: 1,
-      title: 'Product 1',
-      price: 100,
-      description: 'Description 1',
-      category: 'Category 1',
-      image: 'image1.png',
-      rating: { rate: 4.5, count: 10 },
-    };
-
+    product = fakeProduct;
     cartMock = {};
     setCartMock = jest.fn();
 

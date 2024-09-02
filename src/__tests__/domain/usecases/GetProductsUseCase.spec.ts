@@ -9,7 +9,7 @@ describe('GetProductsUseCase', () => {
     const products = await getProductsUseCase.execute();
 
     expect(products).toHaveLength(2);
-    expect(products[0].title).toBe('Product1');
-    expect(products[1].title).toBe('Product2');
+    expect(products[0].title).toBe('Title');
+    expect(products[1].title).toBe('Title2');
   });
 });

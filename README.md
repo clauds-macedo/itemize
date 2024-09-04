@@ -24,13 +24,19 @@ yarn dev
 - Componentes Escaláveis: O componente Card foi feito utilizando Composition Pattern, garantindo que a aplicação não sofra com [**Prop Drilling**](https://www.freecodecamp.org/news/prop-drilling-in-react-explained-with-examples/), podendo ser utilizado de diversas maneiras.
 - Lógica Compartilhada: O projeto utiliza hooks como useCartActions e useProducts para compartilhar lógica entre diferentes componentes de forma eficiente.
 
-## Tecnologias Utilizadas
-- ⚛️ React
-- ⚡ Vite
-- 📜 TypeScript
-- 🧪 Jest
-- 🧹 ESLint
-- 💅 Tailwind CSS
+## 🛠️ Tecnologias Utilizadas
+- React
+- Vite
+- TypeScript
+- Jest
+- ESLint
+- Tailwind CSS
+- Zustand
+- Axios
+- React Router
+- React Toastify
+- Testing Library (React, DOM, Hooks)
+- Prettier
 
 ## Padrões Utilizados
 ### Composition Pattern

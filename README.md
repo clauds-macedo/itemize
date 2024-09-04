@@ -1,5 +1,5 @@
 ## Descrição
-Este projeto é uma aplicação React configurada com Vite que tem como objetivo exibir produtos de uma loja virtual. Os usuários podem navegar pelos produtos, adicionar itens ao carrinho de compras e ajustar quantidades. Ele segue os princípios de Arquitetura Limpa e utiliza o Composition Pattern para promover a reutilização de componentes e lógica, facilitando a manutenção e escalabilidade do projeto.
+Este projeto é uma aplicação React configurada com Vite que tem como objetivo exibir produtos provenientes de uma API. Os usuários podem navegar pelos produtos, adicionar itens ao carrinho de compras e ajustar quantidades e até removê-los do carrinho. O projeto segue os princípios de Arquitetura Limpa e utiliza o Composition Pattern para promover a reutilização de componentes e lógica, facilitando a manutenção e escalabilidade do projeto.
 
 ## 🚀 Como Rodar o Projeto
 ```bash
@@ -64,3 +64,10 @@ Para o reuso de funcionalidades entre telas/componentes num contexto reativo, fo
 │   ├── main.jsx                # Arquivo de entrada da aplicação
 ├── .vscode                     # Configurações locais do VS Code
 ```
+## Otimizações de Desempenho:
+### Update da quantidade de itens no carrinho em O(1):
+- O método updateQuantity é capaz de atualizar a quantidade de um produto no carrinho em tempo constante (O(1)), em vez de percorrer um array de itens.
+- Isso é possível porque o carrinho é representado como um objeto, onde a chave é o id do produto, permitindo acesso direto ao item. Assim, a busca por um produto no carrinho não precisa percorrer uma lista, mas sim acessar diretamente pelo seu id, o que torna a operação muito mais eficiente.
+### Adição e Remoção de Itens em O(1):
+- A operação de adicionar ou remover um item do carrinho também ocorre em O(1), já que ambas as operações envolvem diretamente o uso do id do produto como chave no objeto do carrinho.
+- Adicionar um item é feito criando ou atualizando diretamente a chave correspondente ao produto no objeto, e remover é simplesmente excluir a chave com delete.
